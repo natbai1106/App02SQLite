@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02SQLite.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ver Lista" x:Name="toolbarmenu"
+                     IconImageSource="example_icon.png"
+                     Order="Primary"
+                     Priority="0"
+                     Clicked="toolbarmenu_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+        
+        <Frame BackgroundColor="#2196F3" CornerRadius="0">
+            <Label Text="Registro de Contacto" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+            <Label Text="Nombres:" 
+               FontSize="20"
+               Margin="3"/>
+            <Entry x:Name="nombres"/>
+
+            <Label Text="Apellidos:" 
+               FontSize="20"
+               Margin="3"/>
+            <Entry x:Name="apellidos"/>
+
+            <Label x:Name="fecha" 
+               Text="Fecha Nacimiento:"
+               FontSize="20"
+               Margin="3"/>
+
+            <DatePicker x:Name="fechanac"
+                        DateSelected="fechanac_DateSelected"
+                        MinimumDate="01/01/1900" 
+                        MaximumDate="12/31/2100" 
+                        x:DataType="DatePicker"
+                        />            
+
+            <Label Text="Edad:" 
+               FontSize="20"
+               Margin="3"/>
+            <Entry x:Name="edad"/>
+
+            <Label Text="Correo Electrónico:" 
+               FontSize="20"
+               Margin="3"/>
+            <Entry x:Name="email"/>
+
+            <Label Text="Dirección:" 
+               FontSize="20"
+               Margin="3"/>
+            <Entry x:Name="direccion"/>
+
+
+            <Button x:Name="btnSalvar" 
+                Text="Guardar" 
+                Clicked="btnSalvar_Clicked"
+                CornerRadius="10"
+                BackgroundColor="#64B5F6"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
